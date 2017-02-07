@@ -1,0 +1,36 @@
+﻿<Window x:Class="_3DExperiment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3DExperiment"
+		xmlns:properties="clr-namespace:_3DExperiment.Properties"
+        mc:Ignorable="d"
+		Background="#FF0A0A0A"
+        Title="3D Experiment">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Button Command="{Binding LaunchCommand}"
+				Width="100"
+				Height="50"
+				HorizontalAlignment="Left"
+				Grid.Row="0"
+				Content="{x:Static properties:Resources.Launch}"/>
+		<Button Command="{Binding SettingsCommand}"
+				Width="100"
+				Height="50"
+				HorizontalAlignment="Left"
+				Grid.Row="1"
+				Content="{x:Static properties:Resources.Settings}"/>
+		<Button Command="{Binding ExitCommand}"
+				Width="100"
+				Height="50"
+				HorizontalAlignment="Left"
+				Grid.Row="2"
+				Content="{x:Static properties:Resources.Exit}"/>
+    </Grid>
+</Window>
